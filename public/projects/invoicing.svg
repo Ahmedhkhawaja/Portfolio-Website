@@ -1,0 +1,26 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Invoicing placeholder thumbnail">
+  <defs>
+    <linearGradient id="g" x1="0" y1="750" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FAF7FF"/>
+      <stop offset="0.54" stop-color="#E7DDFF"/>
+      <stop offset="1" stop-color="#B59EFF"/>
+    </linearGradient>
+    <radialGradient id="r" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(980 170) rotate(145) scale(560 400)">
+      <stop stop-color="#6B4CFF" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#6B4CFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="750" rx="56" fill="url(#g)"/>
+  <rect width="1200" height="750" rx="56" fill="url(#r)"/>
+  <g fill="#2C1E4A" fill-opacity="0.08">
+    <rect x="90" y="160" width="430" height="520" rx="28"/>
+    <rect x="140" y="220" width="330" height="16" rx="8"/>
+    <rect x="140" y="256" width="280" height="14" rx="7"/>
+    <rect x="140" y="286" width="300" height="14" rx="7"/>
+    <rect x="140" y="340" width="220" height="12" rx="6"/>
+    <rect x="140" y="370" width="260" height="12" rx="6"/>
+    <rect x="140" y="400" width="240" height="12" rx="6"/>
+  </g>
+  <text x="90" y="120" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Inter, Arial" font-size="28" fill="#2C1E4A" fill-opacity="0.65" letter-spacing="0.06em">UBL INVOICING</text>
+</svg>
+

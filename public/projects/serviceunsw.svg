@@ -1,0 +1,24 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ServiceUNSW placeholder thumbnail">
+  <defs>
+    <linearGradient id="g" x1="1200" y1="0" x2="0" y2="750" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F3FF"/>
+      <stop offset="0.52" stop-color="#E3D8FF"/>
+      <stop offset="1" stop-color="#A892FF"/>
+    </linearGradient>
+    <radialGradient id="r" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(260 580) rotate(10) scale(560 400)">
+      <stop stop-color="#9B7CFF" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#9B7CFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="750" rx="56" fill="url(#g)"/>
+  <rect width="1200" height="750" rx="56" fill="url(#r)"/>
+  <g fill="#2C1E4A" fill-opacity="0.08">
+    <rect x="90" y="170" width="340" height="320" rx="26"/>
+    <rect x="470" y="210" width="640" height="18" rx="9"/>
+    <rect x="470" y="250" width="520" height="14" rx="7"/>
+    <rect x="470" y="280" width="560" height="14" rx="7"/>
+    <rect x="470" y="310" width="460" height="14" rx="7"/>
+  </g>
+  <text x="90" y="120" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Inter, Arial" font-size="28" fill="#2C1E4A" fill-opacity="0.65" letter-spacing="0.06em">SERVICEUNSW</text>
+</svg>
+

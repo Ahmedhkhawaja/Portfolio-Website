@@ -1,0 +1,23 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Swipe News placeholder thumbnail">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1200" y2="750" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5EFFF"/>
+      <stop offset="0.5" stop-color="#E6D9FF"/>
+      <stop offset="1" stop-color="#BFAAFF"/>
+    </linearGradient>
+    <radialGradient id="r" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(960 160) rotate(135) scale(520 360)">
+      <stop stop-color="#7C5CFF" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#7C5CFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="750" rx="56" fill="url(#g)"/>
+  <rect width="1200" height="750" rx="56" fill="url(#r)"/>
+  <g fill="#2C1E4A" fill-opacity="0.08">
+    <rect x="90" y="150" width="420" height="18" rx="9"/>
+    <rect x="90" y="190" width="560" height="14" rx="7"/>
+    <rect x="90" y="220" width="520" height="14" rx="7"/>
+    <rect x="90" y="250" width="460" height="14" rx="7"/>
+  </g>
+  <text x="90" y="120" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Inter, Arial" font-size="28" fill="#2C1E4A" fill-opacity="0.65" letter-spacing="0.06em">SWIPE NEWS</text>
+</svg>
+

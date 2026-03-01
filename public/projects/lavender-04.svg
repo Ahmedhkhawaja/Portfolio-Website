@@ -1,0 +1,25 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lavender gradient placeholder">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBFAFF"/>
+      <stop offset="0.45" stop-color="#E7DEFF"/>
+      <stop offset="1" stop-color="#B59EFF"/>
+    </linearGradient>
+    <radialGradient id="r" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1010 520) rotate(165) scale(560 400)">
+      <stop stop-color="#8E6CFF" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#8E6CFF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="n" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.88" numOctaves="3" stitchTiles="stitch" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0.40  0 0 0 0 0.32  0 0 0 0 0.60  0 0 0 0.10 0" />
+    </filter>
+  </defs>
+  <rect width="1200" height="750" rx="56" fill="url(#g)"/>
+  <rect width="1200" height="750" rx="56" fill="url(#r)"/>
+  <rect width="1200" height="750" rx="56" filter="url(#n)" opacity="0.30"/>
+  <rect x="72" y="170" width="520" height="16" rx="8" fill="#2C1E4A" fill-opacity="0.09"/>
+  <rect x="72" y="206" width="420" height="16" rx="8" fill="#2C1E4A" fill-opacity="0.07"/>
+  <rect x="72" y="242" width="320" height="16" rx="8" fill="#2C1E4A" fill-opacity="0.06"/>
+  <text x="72" y="110" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Inter, Arial" font-size="24" fill="#2C1E4A" fill-opacity="0.55" letter-spacing="0.12em">PROJECT</text>
+</svg>
+
