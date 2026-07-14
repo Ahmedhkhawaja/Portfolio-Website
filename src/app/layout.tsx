@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Archivo, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import { AppProviders } from "@/components/providers/app-providers";
-import { Header } from "@/components/site/header";
-import { Footer } from "@/components/site/footer";
 
-const fontSans = Inter({
-  variable: "--font-inter",
+import { Nav } from "@/components/nav";
+import { Footer } from "@/components/footer";
+import { ScrollProgress } from "@/components/scroll-progress";
+
+const archivo = Archivo({
+  variable: "--font-archivo",
   subsets: ["latin"],
   display: "swap",
 });
 
-const fontDisplay = Playfair_Display({
-  variable: "--font-playfair",
+const grotesk = Space_Grotesk({
+  variable: "--font-grotesk",
   subsets: ["latin"],
   display: "swap",
 });
@@ -20,15 +21,15 @@ const fontDisplay = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://ahmed-portfolio.vercel.app"),
   title: {
-    default: "Ahmed Hassan Khawaja",
-    template: "%s · Ahmed Hassan Khawaja",
+    default: "Ahmed Hassan Khawaja | AI / Software Engineer",
+    template: "%s | Ahmed Hassan Khawaja",
   },
   description:
-    "Second-year Software Engineering student at UNSW Sydney. Editorial, minimal portfolio featuring selected projects.",
+    "AI / Software Engineer and UNSW software engineering student. I build automation pipelines, AI powered applications, and full stack products.",
   openGraph: {
-    title: "Ahmed Hassan Khawaja",
+    title: "Ahmed Hassan Khawaja | AI / Software Engineer",
     description:
-      "Second-year Software Engineering student at UNSW Sydney. Selected projects and contact links.",
+      "AI / Software Engineer and UNSW software engineering student. Automation pipelines, AI powered applications, and full stack products.",
     type: "website",
     url: "/",
     siteName: "Ahmed Hassan Khawaja",
@@ -44,17 +45,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning data-accent="lavender">
-      <body className={`${fontSans.variable} ${fontDisplay.variable} antialiased`}>
-        <AppProviders>
-          <div className="min-h-dvh bg-background text-foreground">
-            <Header />
-            <main className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-              {children}
-            </main>
-            <Footer />
-          </div>
-        </AppProviders>
+    <html lang="en">
+      <body className={`${archivo.variable} ${grotesk.variable} antialiased`}>
+        <ScrollProgress />
+        <Nav />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
