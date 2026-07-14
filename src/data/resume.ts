@@ -98,16 +98,16 @@ export const projects: Project[] = [
     slug: "teapot-invoicing",
     title: "Teapots Invoicing",
     year: "2026",
-    award: "UNSW Faculty of Engineering Top Teams Recognition",
+    award: "UNSW Faculty of Engineering Top Software Engineering Team",
     description:
       "AI document automation platform that creates invoices, despatch advices, and order documents, with AI assisted generation and validation of document data.",
     highlights: [
       "Deployed on AWS and published live at teapotinvoicing.app.",
-      "Recognised by the UNSW Faculty of Engineering as a Top Team in Term 1 2026 for technical work, adaptability, and user centred design.",
+      "Recognised by the UNSW Faculty of Engineering as the Top Software Engineering Team in Term 1 2026 for technical work, adaptability, and user centred design.",
       "Delivered as a 4 person team using Agile, iterating on real user feedback.",
     ],
     tech: ["React", "Node.js", "AWS", "AI"],
-    image: "/projects/in.png",
+    image: "/projects/happy_teapot.gif",
     liveUrl: "https://teapotinvoicing.app",
     status: "Live",
     featured: true,
@@ -257,7 +257,7 @@ export const education = {
 
 export const recognition = [
   {
-    title: "Top Teams Recognition, UNSW Faculty of Engineering",
+    title: "Top Software Engineering Team, UNSW Faculty of Engineering",
     detail: "Awarded in Term 1 2026 for the Teapots Invoicing project.",
   },
   {
