@@ -43,7 +43,8 @@ export function Experience() {
                 />
 
                 <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
-                  {job.period} · {job.location}
+                  {job.period}
+                  {job.location ? ` · ${job.location}` : ""}
                 </p>
                 <h3 className="mt-2 font-display text-2xl font-bold tracking-tight sm:text-3xl">
                   {job.role}

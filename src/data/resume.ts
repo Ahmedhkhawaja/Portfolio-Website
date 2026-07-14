@@ -25,7 +25,7 @@ export type Experience = {
   company: string;
   role: string;
   period: string;
-  location: string;
+  location?: string;
   summary: string;
   points: string[];
   tech: string[];
@@ -52,7 +52,6 @@ export const experience: Experience[] = [
     company: "Nextbridge",
     role: "Software Engineer Intern",
     period: "Dec 2025 to Feb 2026",
-    location: "Remote",
     summary:
       "Delivered production features across client projects on the MERN stack.",
     points: [

@@ -42,7 +42,7 @@ export function Education() {
     <section id="education" className="scroll-mt-24 border-t border-border bg-card/30">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <SectionHeading
-          index="04"
+          index="03"
           eyebrow="Education & recognition"
           title="The foundation"
         />

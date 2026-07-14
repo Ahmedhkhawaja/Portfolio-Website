@@ -30,7 +30,7 @@ export function Skills() {
     <section id="skills" className="scroll-mt-24 border-t border-border">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <SectionHeading
-          index="03"
+          index="04"
           eyebrow="Skills"
           title="What I work with"
           description="The languages, tools, and platforms behind everything above."
