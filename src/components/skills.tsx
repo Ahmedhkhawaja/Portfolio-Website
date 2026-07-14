@@ -28,7 +28,7 @@ export function Skills() {
 
   return (
     <section id="skills" className="scroll-mt-24 border-t border-border">
-      <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <SectionHeading
           index="03"
           eyebrow="Skills"
@@ -36,7 +36,7 @@ export function Skills() {
           description="The languages, tools, and platforms behind everything above."
         />
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-4 sm:mt-14 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
           {skills.map((group, i) => (
             <Reveal key={group.group} delay={i * 0.06} className="h-full">
               <div className="h-full rounded-2xl border border-border bg-card p-6 transition-colors duration-200 hover:border-primary/40">

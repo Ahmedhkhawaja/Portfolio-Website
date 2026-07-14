@@ -190,17 +190,16 @@ export const projects: Project[] = [
     featured: false,
   },
   {
-    slug: "swipe-news",
-    title: "Swipe News",
+    slug: "all-time-boxing",
+    title: "All Time Boxing",
     year: "2026",
     description:
-      "TikTok style mobile news app with AI summaries and a personalised feed ranked by recency, category, and engagement.",
-    highlights: [
-      "Swipe based mobile UI with an AI summarisation pipeline over live News API data.",
-    ],
-    tech: ["React Native", "TypeScript", "AI"],
-    image: "/projects/tt.png",
-    status: "In Progress",
+      "Website for All Time Boxing, designed and built end to end and running live in production.",
+    highlights: ["Built with Next.js and shipped at alltimeboxing.com.au."],
+    tech: ["Next.js", "TypeScript", "Tailwind"],
+    image: "/projects/alltimeboxing.jpg",
+    liveUrl: "https://www.alltimeboxing.com.au/",
+    status: "Live",
     featured: false,
   },
 ];

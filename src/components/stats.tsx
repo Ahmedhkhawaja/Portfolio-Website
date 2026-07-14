@@ -32,7 +32,7 @@ function CountUp({ value, suffix }: { value: number; suffix: string }) {
   }, [inView, value, reduce]);
 
   return (
-    <span ref={ref} className="font-display text-4xl font-extrabold tracking-tight text-primary sm:text-5xl">
+    <span ref={ref} className="font-display text-3xl font-extrabold tracking-tight text-primary sm:text-5xl">
       {display.toLocaleString()}
       {suffix}
     </span>
@@ -42,7 +42,7 @@ function CountUp({ value, suffix }: { value: number; suffix: string }) {
 export function Stats() {
   return (
     <section id="numbers" className="border-y border-border bg-card/40">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 py-16 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
+      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-4 py-12 sm:gap-10 sm:px-6 sm:py-16 lg:grid-cols-4 lg:px-8">
         {stats.map((s, i) => (
           <Reveal key={s.label} delay={i * 0.08}>
             <CountUp value={s.value} suffix={s.suffix} />

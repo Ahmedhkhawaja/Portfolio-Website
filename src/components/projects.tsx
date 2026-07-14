@@ -75,14 +75,13 @@ function FeaturedProject({ project, index }: { project: Project; index: number }
           flip ? "lg:[&>*:first-child]:order-2" : ""
         }`}
       >
-        <div className="relative overflow-hidden rounded-2xl border border-border bg-card">
-          <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-background/50 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-20" />
+        <div className="relative overflow-hidden rounded-2xl border border-border bg-card p-2">
           <Image
             src={project.image}
             alt={`${project.title} screenshot`}
             width={1200}
             height={750}
-            className="aspect-[16/10] w-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+            className="aspect-[16/10] w-full rounded-xl object-contain transition-transform duration-500 ease-out group-hover:scale-[1.02]"
           />
         </div>
 
@@ -136,13 +135,13 @@ function FeaturedProject({ project, index }: { project: Project; index: number }
 function CompactProject({ project }: { project: Project }) {
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-colors duration-200 hover:border-primary/40">
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden border-b border-border bg-background/40 p-2">
         <Image
           src={project.image}
           alt={`${project.title} screenshot`}
           width={800}
           height={500}
-          className="aspect-[16/10] w-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+          className="aspect-[16/10] w-full object-contain transition-transform duration-500 ease-out group-hover:scale-[1.03]"
         />
       </div>
       <div className="flex flex-1 flex-col p-6">
@@ -191,7 +190,7 @@ export function Projects() {
 
   return (
     <section id="work" className="scroll-mt-24">
-      <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <SectionHeading
           index="01"
           eyebrow="Selected work"
@@ -199,13 +198,13 @@ export function Projects() {
           description="Award winning university projects, live products for real businesses, and systems running in production today."
         />
 
-        <div className="mt-16 space-y-24">
+        <div className="mt-10 space-y-16 sm:mt-16 sm:space-y-24">
           {featured.map((p, i) => (
             <FeaturedProject key={p.slug} project={p} index={i} />
           ))}
         </div>
 
-        <Reveal className="mt-24">
+        <Reveal className="mt-16 sm:mt-24">
           <h3 className="font-display text-xl font-bold tracking-tight text-muted-foreground">
             More builds
           </h3>

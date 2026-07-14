@@ -53,12 +53,12 @@ export function Contact() {
     <section id="contact" className="relative scroll-mt-24 overflow-hidden border-t border-border">
       <div className="pointer-events-none absolute left-1/2 top-0 h-[24rem] w-[40rem] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px]" />
 
-      <div className="relative mx-auto max-w-4xl px-4 py-28 text-center sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-4xl px-4 py-20 text-center sm:px-6 sm:py-28 lg:px-8">
         <Reveal>
           <p className="text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground">
             05 · Contact
           </p>
-          <h2 className="mt-5 font-display text-5xl font-extrabold tracking-tight sm:text-7xl">
+          <h2 className="mt-5 font-display text-4xl font-extrabold tracking-tight sm:text-7xl">
             Let&apos;s build
             <br />
             <span className="text-primary">something real</span>

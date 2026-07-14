@@ -40,16 +40,16 @@ function CourseBars() {
 export function Education() {
   return (
     <section id="education" className="scroll-mt-24 border-t border-border bg-card/30">
-      <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <SectionHeading
           index="04"
           eyebrow="Education & recognition"
           title="The foundation"
         />
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-2">
+        <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-6 lg:grid-cols-2">
           <Reveal className="h-full">
-            <div className="h-full rounded-2xl border border-border bg-card p-8">
+            <div className="h-full rounded-2xl border border-border bg-card p-5 sm:p-8">
               <div className="flex items-center gap-3">
                 <span className="rounded-xl bg-primary/10 p-2.5 text-primary">
                   <GraduationCap className="h-5 w-5" />
@@ -75,7 +75,7 @@ export function Education() {
           </Reveal>
 
           <Reveal delay={0.1} className="h-full">
-            <div className="h-full rounded-2xl border border-border bg-card p-8">
+            <div className="h-full rounded-2xl border border-border bg-card p-5 sm:p-8">
               <div className="flex items-center gap-3">
                 <span className="rounded-xl bg-primary/10 p-2.5 text-primary">
                   <Award className="h-5 w-5" />

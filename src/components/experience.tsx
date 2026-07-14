@@ -17,7 +17,7 @@ export function Experience() {
 
   return (
     <section id="experience" className="scroll-mt-24 border-t border-border bg-card/30">
-      <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <SectionHeading
           index="02"
           eyebrow="Experience"
@@ -25,7 +25,7 @@ export function Experience() {
           description="From shipping AI pipelines in industry to founding my own studio."
         />
 
-        <div ref={ref} className="relative mt-16">
+        <div ref={ref} className="relative mt-10 sm:mt-16">
           {/* Timeline rail that fills as you scroll */}
           <div className="absolute left-2 top-0 h-full w-px bg-border sm:left-3" aria-hidden>
             <motion.div
@@ -34,9 +34,9 @@ export function Experience() {
             />
           </div>
 
-          <div className="space-y-16">
+          <div className="space-y-12 sm:space-y-16">
             {experience.map((job) => (
-              <Reveal key={job.company} className="relative pl-12 sm:pl-16">
+              <Reveal key={job.company} className="relative pl-8 sm:pl-16">
                 <span
                   aria-hidden
                   className="absolute left-2 top-2 h-3 w-3 -translate-x-1/2 rounded-full border-2 border-primary bg-background sm:left-3"
