@@ -1,13 +1,20 @@
-import type { Metadata } from "next";
-import { Archivo, Space_Grotesk } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Pixelify_Sans, Press_Start_2P, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { ScrollProgress } from "@/components/scroll-progress";
 
-const archivo = Archivo({
-  variable: "--font-archivo",
+const pixelify = Pixelify_Sans({
+  variable: "--font-pixelify",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const arcade = Press_Start_2P({
+  variable: "--font-arcade",
+  weight: "400",
   subsets: ["latin"],
   display: "swap",
 });
@@ -25,11 +32,10 @@ export const metadata: Metadata = {
     template: "%s | Ahmed Hassan Khawaja",
   },
   description:
-    "AI / Software Engineer and UNSW software engineering student. I build automation pipelines, AI powered applications, and full stack products.",
+    "AI / Software Engineer and UNSW student. I build AI tools, apps and websites that real people use.",
   openGraph: {
     title: "Ahmed Hassan Khawaja | AI / Software Engineer",
-    description:
-      "AI / Software Engineer and UNSW software engineering student. Automation pipelines, AI powered applications, and full stack products.",
+    description: "I build AI tools, apps and websites that real people use.",
     type: "website",
     url: "/",
     siteName: "Ahmed Hassan Khawaja",
@@ -39,6 +45,10 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: "#0c0e1a",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -46,7 +56,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${archivo.variable} ${grotesk.variable} antialiased`}>
+      <body className={`${pixelify.variable} ${arcade.variable} ${grotesk.variable} antialiased`}>
         <ScrollProgress />
         <Nav />
         <main>{children}</main>

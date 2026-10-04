@@ -5,6 +5,8 @@ import { Check, Copy, Github, Linkedin, Mail, Phone } from "lucide-react";
 
 import { profile } from "@/data/resume";
 import { Reveal } from "@/components/reveal";
+import { Eyebrow } from "@/components/pixel";
+import { Snake } from "@/components/snake";
 
 function CopyRow({
   icon,
@@ -20,10 +22,10 @@ function CopyRow({
   const [copied, setCopied] = useState(false);
 
   return (
-    <div className="flex items-center justify-between gap-3 rounded-2xl border border-border bg-card px-5 py-4">
+    <div className="px flex items-center justify-between gap-3 bg-card px-4 py-3">
       <a
         href={href}
-        className="flex min-w-0 cursor-pointer items-center gap-3 transition-colors duration-200 hover:text-primary"
+        className="flex min-w-0 items-center gap-3 transition-colors duration-150 hover:text-primary"
       >
         <span className="text-primary">{icon}</span>
         <span className="truncate text-sm font-medium">{value}</span>
@@ -31,7 +33,7 @@ function CopyRow({
       <button
         type="button"
         aria-label={`Copy ${label}`}
-        className="cursor-pointer rounded-full border border-border p-2.5 text-muted-foreground transition-colors duration-200 hover:border-primary/50 hover:text-primary"
+        className="cursor-pointer bg-muted p-2.5 text-muted-foreground transition-colors duration-150 hover:text-primary"
         onClick={async () => {
           try {
             await navigator.clipboard.writeText(value);
@@ -51,26 +53,21 @@ function CopyRow({
 export function Contact() {
   return (
     <section id="contact" className="relative scroll-mt-24 overflow-hidden border-t border-border">
-      <div className="pointer-events-none absolute left-1/2 top-0 h-[24rem] w-[40rem] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px]" />
+      <div className="bg-grid absolute inset-0 [mask-image:radial-gradient(ellipse_60%_60%_at_30%_40%,black,transparent)]" />
 
-      <div className="relative mx-auto max-w-4xl px-4 py-20 text-center sm:px-6 sm:py-28 lg:px-8">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-4 py-20 sm:px-6 sm:py-24 lg:grid-cols-2 lg:px-8">
         <Reveal>
-          <p className="text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground">
-            05 · Contact
-          </p>
-          <h2 className="mt-5 font-display text-4xl font-extrabold tracking-tight sm:text-7xl">
-            Let&apos;s build
+          <Eyebrow>Final level · Contact</Eyebrow>
+          <h2 className="mt-3 font-pixel text-5xl font-bold leading-tight sm:text-6xl">
+            Player 2,
             <br />
-            <span className="text-primary">something real</span>
+            <span className="text-primary">join the game?</span>
           </h2>
-          <p className="mx-auto mt-6 max-w-xl text-base leading-7 text-muted-foreground">
-            The quickest way to reach me is email or LinkedIn. I am always happy
-            to talk about internships, projects, or interesting problems.
+          <p className="mt-5 max-w-md text-base leading-7 text-muted-foreground">
+            Got a role, a project or just want to chat? Send me a message. I reply fast.
           </p>
-        </Reveal>
 
-        <Reveal delay={0.1}>
-          <div className="mx-auto mt-12 grid max-w-xl gap-4 text-left">
+          <div className="mt-8 grid max-w-md gap-4">
             <CopyRow
               icon={<Mail className="h-5 w-5" />}
               label="email"
@@ -84,15 +81,13 @@ export function Contact() {
               href={`tel:${profile.phone.replace(/\s+/g, "")}`}
             />
           </div>
-        </Reveal>
 
-        <Reveal delay={0.2}>
-          <div className="mt-8 flex items-center justify-center gap-3">
+          <div className="mt-8 flex flex-wrap gap-4">
             <a
               href={profile.links.linkedin}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity duration-200 hover:opacity-85"
+              className="px px-btn inline-flex items-center gap-2 bg-primary px-5 py-2.5 font-pixel font-semibold text-primary-foreground [--px-c:var(--primary)]"
             >
               <Linkedin className="h-4 w-4" /> LinkedIn
             </a>
@@ -100,11 +95,18 @@ export function Contact() {
               href={profile.links.github}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium transition-colors duration-200 hover:border-primary/50 hover:text-primary"
+              className="px px-btn inline-flex items-center gap-2 bg-card px-5 py-2.5 font-pixel"
             >
               <Github className="h-4 w-4" /> GitHub
             </a>
           </div>
+        </Reveal>
+
+        <Reveal delay={0.1}>
+          <p className="mb-4 text-center font-pixel text-sm text-muted-foreground">
+            Bonus level: take a quick break
+          </p>
+          <Snake />
         </Reveal>
       </div>
     </section>

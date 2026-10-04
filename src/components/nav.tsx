@@ -1,39 +1,35 @@
 "use client";
 
-import Link from "next/link";
 import { FileDown } from "lucide-react";
 
 import { profile } from "@/data/resume";
 
 const links = [
+  { href: "#projects", label: "Projects" },
+  { href: "#map", label: "Map" },
   { href: "#work", label: "Work" },
-  { href: "#experience", label: "Experience" },
+  { href: "#trophies", label: "Trophies" },
   { href: "#skills", label: "Skills" },
-  { href: "#education", label: "Education" },
   { href: "#contact", label: "Contact" },
 ];
 
 export function Nav() {
   return (
-    <header className="fixed inset-x-0 top-3 z-40 px-3 sm:top-4 sm:px-4">
-      <div className="mx-auto flex max-w-3xl items-center justify-between gap-2 rounded-full border border-border bg-background/70 py-1.5 pl-4 pr-1.5 backdrop-blur-md sm:py-2 sm:pl-5 sm:pr-2">
-        <Link
-          href="#top"
-          className="shrink-0 font-display text-sm font-bold tracking-tight"
-          aria-label="Back to top"
-        >
-          AK<span className="text-primary">.</span>
-        </Link>
+    <header className="fixed inset-x-0 top-4 z-40 px-4">
+      <div className="px mx-auto flex max-w-3xl items-center justify-between gap-2 bg-background/85 py-2 pl-4 pr-2 backdrop-blur-md">
+        <a href="#top" className="shrink-0 font-pixel text-lg font-bold" aria-label="Back to top">
+          AK<span className="blink text-primary">_</span>
+        </a>
 
         <nav
-          className="flex min-w-0 items-center gap-0.5 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:gap-1"
+          className="flex min-w-0 items-center overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           aria-label="Sections"
         >
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="whitespace-nowrap rounded-full px-2.5 py-1.5 text-xs text-muted-foreground transition-colors duration-200 hover:bg-muted hover:text-foreground sm:px-3 sm:text-sm"
+              className="whitespace-nowrap px-2.5 py-1.5 font-pixel text-sm text-muted-foreground transition-colors duration-150 hover:text-primary sm:px-3 sm:text-base"
             >
               {l.label}
             </a>
@@ -43,7 +39,7 @@ export function Nav() {
         <a
           href={profile.links.cv}
           download
-          className="inline-flex shrink-0 cursor-pointer items-center gap-1.5 rounded-full bg-primary px-3 py-2 text-xs font-semibold text-primary-foreground transition-opacity duration-200 hover:opacity-85 sm:gap-2 sm:px-4 sm:text-sm"
+          className="px px-btn inline-flex shrink-0 items-center gap-1.5 bg-primary px-3 py-1.5 font-pixel text-sm font-semibold text-primary-foreground [--px-c:var(--primary)]"
         >
           <FileDown className="h-4 w-4" />
           CV

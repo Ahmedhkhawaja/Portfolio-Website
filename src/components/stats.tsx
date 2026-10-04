@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useInView, useReducedMotion } from "framer-motion";
 
 import { stats } from "@/data/resume";
-import { Reveal } from "@/components/reveal";
+import { Sprite, sprites } from "@/components/pixel";
 
 function CountUp({ value, suffix }: { value: number; suffix: string }) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -13,18 +13,13 @@ function CountUp({ value, suffix }: { value: number; suffix: string }) {
   const [display, setDisplay] = useState(0);
 
   useEffect(() => {
-    if (!inView) return;
-    if (reduce) {
-      setDisplay(value);
-      return;
-    }
-    const duration = 1400;
+    if (!inView || reduce) return;
+    const duration = 1200;
     const start = performance.now();
     let frame: number;
     const tick = (now: number) => {
       const t = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - t, 3);
-      setDisplay(Math.round(eased * value));
+      setDisplay(Math.round((1 - Math.pow(1 - t, 3)) * value));
       if (t < 1) frame = requestAnimationFrame(tick);
     };
     frame = requestAnimationFrame(tick);
@@ -32,26 +27,26 @@ function CountUp({ value, suffix }: { value: number; suffix: string }) {
   }, [inView, value, reduce]);
 
   return (
-    <span ref={ref} className="font-display text-3xl font-extrabold tracking-tight text-primary sm:text-5xl">
-      {display.toLocaleString()}
+    <span ref={ref} className="font-arcade text-lg text-gold sm:text-2xl">
+      {(reduce ? value : display).toLocaleString()}
       {suffix}
     </span>
   );
 }
 
+/** Impact numbers shown like an arcade high score board. */
 export function Stats() {
   return (
-    <section id="numbers" className="border-y border-border bg-card/40">
-      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-4 py-12 sm:gap-10 sm:px-6 sm:py-16 lg:grid-cols-4 lg:px-8">
-        {stats.map((s, i) => (
-          <Reveal key={s.label} delay={i * 0.08}>
+    <div className="px mt-10 grid grid-cols-2 gap-6 bg-card/60 p-6 lg:grid-cols-4">
+      {stats.map((s) => (
+        <div key={s.label}>
+          <div className="flex items-center gap-2">
+            <Sprite sprite={sprites.coin} size={18} />
             <CountUp value={s.value} suffix={s.suffix} />
-            <p className="mt-3 max-w-[16rem] text-sm leading-6 text-muted-foreground">
-              {s.label}
-            </p>
-          </Reveal>
-        ))}
-      </div>
-    </section>
+          </div>
+          <p className="mt-2 text-sm leading-5 text-muted-foreground">{s.label}</p>
+        </div>
+      ))}
+    </div>
   );
 }

@@ -3,6 +3,8 @@
 import { motion, useReducedMotion } from "framer-motion";
 import type { ReactNode } from "react";
 
+import { Eyebrow } from "@/components/pixel";
+
 export function Reveal({
   children,
   delay = 0,
@@ -30,31 +32,26 @@ export function Reveal({
 }
 
 export function SectionHeading({
-  index,
+  level,
   eyebrow,
   title,
   description,
 }: {
-  index: string;
+  level: string;
   eyebrow: string;
   title: string;
   description?: string;
 }) {
   return (
     <Reveal>
-      <div className="flex items-baseline gap-4">
-        <span className="font-display text-sm font-semibold tracking-widest text-primary">
-          {index}
-        </span>
-        <span className="text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground">
-          {eyebrow}
-        </span>
-      </div>
-      <h2 className="mt-4 font-display text-4xl font-bold tracking-tight sm:text-5xl">
+      <Eyebrow>
+        Level {level} · {eyebrow}
+      </Eyebrow>
+      <h2 className="mt-3 font-pixel text-4xl font-bold tracking-tight sm:text-5xl">
         {title}
       </h2>
       {description ? (
-        <p className="mt-4 max-w-2xl text-base leading-7 text-muted-foreground">
+        <p className="mt-3 max-w-xl text-base leading-7 text-muted-foreground">
           {description}
         </p>
       ) : null}

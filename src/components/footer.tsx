@@ -6,8 +6,8 @@ export function Footer() {
   return (
     <footer className="border-t border-border">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row sm:px-6 lg:px-8">
-        <p className="text-sm text-muted-foreground">
-          {profile.name} · {profile.location}
+        <p className="font-pixel text-sm text-muted-foreground">
+          Thanks for playing! <span className="text-primary">♥</span> {profile.name} · <span className="font-sans">{new Date().getFullYear()}</span>
         </p>
         <div className="flex items-center gap-4">
           <a

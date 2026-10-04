@@ -1,21 +1,22 @@
 import { Hero } from "@/components/hero";
-import { Stats } from "@/components/stats";
 import { Projects } from "@/components/projects";
+import { Journey } from "@/components/journey";
 import { Experience } from "@/components/experience";
+import { Trophies } from "@/components/trophies";
 import { Skills } from "@/components/skills";
-import { Education } from "@/components/education";
 import { Contact } from "@/components/contact";
+import { ProjectDialogProvider } from "@/components/project-dialog";
 
 export default function Home() {
   return (
-    <>
+    <ProjectDialogProvider>
       <Hero />
-      <Stats />
       <Projects />
+      <Journey />
       <Experience />
-      <Education />
+      <Trophies />
       <Skills />
       <Contact />
-    </>
+    </ProjectDialogProvider>
   );
 }
